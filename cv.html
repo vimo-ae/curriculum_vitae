@@ -10,48 +10,61 @@
 </head>
 <body class="bg-neutral-100 ">
     
-    <header class="bg-green-700 text-neutral-100 fixed top-0 inset-x-0 z-50">
-        <div class="max-w-6xl mx-auto py-4 flex justify-between items-center">
-            <div class="font-bold text-2xl">
-                <h1 class="tracking-[.20em]">VIMO</h1>
+        <header class="bg-green-700 text-neutral-100 fixed top-0 inset-x-0 z-50">
+            <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+                <div class="font-bold text-2xl">
+                    <a href="#home" class="tracking-[.20em]">VIMO</a>
+                </div>
+                <div class="font-regular text-xl">
+                    <ul class="hidden md:flex gap-12">
+                        <li><a href="#about" class="nav-link relative pb-1 hover:text-green-300">About</a></li>
+                        <li><a href="#skill" class="nav-link relative pb-1 hover:text-green-300">Skill</a></li>
+                        <li><a href="#project" class="nav-link relative pb-1 hover:text-green-300">Project</a></li>
+                        <li><a href="#contact" class="nav-link relative pb-1 hover:text-green-300">Contact</a></li>
+                    </ul>
+
+                    <button id="navbarBtn" class="md:hidden text-2xl focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
-            <div class="font-regular text-xl">
-                <ul class="flex gap-12">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skill">Skill</a></li>
-                    <li><a href="#project">Project</a></li>
-                    <li><a href="#contact">Contact</a></li>
+
+            <div id="mobileNavbar" class="hidden md:hidden bg-green-700">
+                <ul class="flex flex-col items-center gap-6 px-6 py-6 text-lg">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skill" class="nav-link">Skill</a></li>
+                    <li><a href="#project" class="nav-link">Project</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section class="min-h-screen flex items-center">
+    <section id="home" class="reveal min-h-screen flex items-center pt-24">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-                    Hi, Saya <span class="text-green-700">Vimo</span>...   
+            <div class="text-center md:text-left">
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-800 leading-tight">
+                    Hai, Saya <span class="text-green-700">Vimo</span>...   
                 </h1>
-                <p class="mt-4 text-gray-600 text-lg">Mahasiswa Teknologi Informasi dengan minat di bidang 
+                <p class="mt-4 text-gray-600 text-base md:text-lg">Mahasiswa Teknologi Informasi dengan minat di bidang 
                     <span class="font-medium text-gray-800">Web Development</span>, 
                     <span class="font-medium text-gray-800">Cyber Security</span>, dan 
                     <span class="font-medium text-gray-800">Internet of Things</span>.
                 </p>
-                <div class="text-4xl text-green-900 flex gap-6 justify-start mt-4">
+                <div class="text-3xl md:text-4xl text-green-700 flex gap-6 justify-center md:justify-start mt-4">
                     <a href="https://wa.me/6289528863099" target="_blank">
-                        <i class="fa-brands fa-whatsapp"></i>
+                        <i class="fa-brands fa-whatsapp hover:text-green-800 active:scale-90"></i>
                     </a>                       
                     <a href="https://www.instagram.com/vimo0o" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-instagram hover:text-green-800 active:scale-90"></i>
                     </a>
                     <a href="https://github.com/vimo-ae" target="_blank">
-                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-github hover:text-green-800 active:scale-90"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/vedder-timothy-simbolon" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-linkedin hover:text-green-800 active:scale-90"></i>
                     </a>
                 </div>
-                <div class="mt-8 flex gap-4">
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a href="#project" class="px-6 py-3 bg-green-700 text-white rounded-lg shadow hover:bg-green-800 transition">Lihat Portofolio</a>
                     <a href="#contact" class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-200 transition"> Hubungi Saya</a>
                 </div>
@@ -59,200 +72,213 @@
             </div>
 
             <div class="flex justify-center">
-                <img src="assets/profile.jpg" 
+                <img src="assets/profile.jpeg" 
                     alt="Foto Profil" 
-                    class="w-84 h-84 object-cover rounded-full shadow-lg">
+                    class="w-48 h-48 md:w-84 md:h-84 object-cover rounded-full shadow-lg hover:-translate-y-1 hover:shadow-xl transition duration-300">
             </div>
-  </div>
-</section>
-
-    <!-- <section>
-        <div>
-
         </div>
-    </section> -->
+    </section>
 
-    <section id="about" class="scroll-mt-24">
+    <section id="about" class="reveal scroll-mt-24">
         <div class="">
-            <div class="max-w-6xl mx-auto mt-8 px-6 flex items-center gap-16">
-                <div class="w-4/5 text-gray-800">
+            <div class="max-w-6xl mx-auto mt-24 md:mt-10 px-6 grid grid-cols-1 md:grid-cols-[2fr_1fr] flex items-center gap-6">
+                <div class="text-center md:text-left text-gray-800">
                     <p class="text-xl mb-2">Hello, I'm..</p>
-                    <h1 class="text-5xl leading-12 text-green-700 font-bold">Vedder Timothy Simbolon 
+                    <h1 class="text-4xl md:text-5xl leading-12 text-green-700 font-bold">Vedder Timothy Simbolon</h1>  
                     <h1 class="text-4xl font-semibold text-gray-800 mb-4">a.k.a Vimo</h1>
-                    <h2 class="text-2xl font-semibold mb-2">IT Student at Univesitas Sumatera Utara</h1>
+                    <h2 class="text-2xl font-semibold mb-2">IT Student at Univesitas Sumatera Utara</h2>
 
-                    <p class="text-lg font-medium text-justify mb-5">
+                    <p class="text-base md:text-lg font-regular text-justify mb-5">
                         Saya adalah mahasiswa Teknologi Informasi yang memiliki minat pada pengembangan web, keamanan siber, dan sistem cerdas. Berpengalaman dalam membangun beberapa proyek berbasis web menggunakan HTML, CSS, JavaScript, dan PHP, serta terus mengembangkan kemampuan teknis melalui proyek dan pembelajaran mandiri.
                     </p>
                 </div>
 
-                <div class="w-2/5 flex justify-end">
+                <div class="md:pr-3 flex justify-center md:justify-end">
                     <img src="assets/image.jpg" 
                         alt=""
-                        class="w-70 rounded-xl">
+                        class="w-56 md:w-64 rounded-xl shadow-lg">
                 </div>
             </div>
-            <div class="max-w-6xl mx-auto mt-4 px-6 flex justify-between">
-                <div class="w-84 h-32 bg-neutral-300 box-sizing rounded-md">
+            <div class="max-w-6xl mx-auto mt-8 px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                
+                <div class=" bg-green-700 text-white rounded-xl p-6 shadow-lg hover:-translate-y-1 hover:shadow-xl transition duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-4xl font-bold">3+</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8V6a4 4 0 00-8 0v2M5 8h14v10a2 2 0 01-2 2H7a2 2 0 01-2-2V8z" />
+                        </svg>
+                    </div>
+                    <p class="uppercase text-sm tracking-widest mt-1">Projects Completed</p>
+                    <p class="text-sm mt-2">Academic, personal, & freelance projects</p>
                 </div>
-                <div class="w-84 h-32 bg-neutral-300 box-sizing rounded-md">
+
+                <div class=" bg-green-700 text-white rounded-xl p-6 shadow-lg hover:-translate-y-1 hover:shadow-xl transition duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-4xl font-bold">4</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <p class="uppercase text-sm tracking-widest mt-1">Certificates Earned</p>
+                    <p class="text-sm mt-2">IT, web, and digital skills</p>
                 </div>
-                <div class="w-84 h-32 bg-neutral-300 box-sizing rounded-md">
+
+                <div class=" bg-green-700 text-white rounded-xl p-6 shadow-lg hover:-translate-y-1 hover:shadow-xl transition duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-4xl font-bold">1+</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3-.895 3-2s-1.343-2-3-2-3 .895-3 2 1.343 2 3 2zM6 20v-2a6 6 0 0112 0v2"/>
+                        </svg>
+                    </div>
+                    <p class="uppercase text-sm tracking-widest mt-1">Years Active</p>
+                    <p class="text-sm mt-2">Learning & building in tech</p>
                 </div>
+
             </div>
         </div >
     </section>
     
-    <section id="skill" class="scroll-mt-24">    
+    <section id="skill" class="reveal scroll-mt-24">    
         <div class="max-w-6xl mx-auto mt-24 px-6 text-gray-800">
-            <h1 class="text-4xl font-semibold mb-4 flex justify-center">Skill</h1>
-            <h1 class="text-lg font-regular mb-4 flex text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quidem quia nam vitae sequi, dicta dolorum optio eum ullam expedita porro sint minus eligendi autem architecto repudiandae delectus, deleniti dolores?</h1>
-            <div class="grid grid-cols-5 gap-8 mt-10">
-                <div class="w-36 h-36 bg-neutral-300 box-sizing rounded-md flex flex-col items-center text-center">
-                    <img src="assets/skill1.png" alt="" class="w-20 h-20 mt-4">
-                    <h1 class="text-xl font-bold mt-2">HTML</h1>
+            <h1 class="text-4xl tracking-widest font-semibold mb-4 flex justify-center">Skill</h1>
+            <h1 class="text-base md:text-lg font-regular mb-4 md:px-24 flex text-center">Beberapa teknologi dan tools yang saya gunakan untuk membangun website, mengelola proyek, dan merancang antarmuka pengguna.</h1>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-10">
+                <div class="group bg-white rounded-xl flex flex-col items-center text-center shadow-sm shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="" class="w-12 h-12 mt-3">
+                    <p class="text-xl font-semibold my-2 group-hover:text-green-700">HTML</p>
                 </div>
-                <div class="w-36 h-36 bg-neutral-300 box-sizing rounded-md flex flex-col items-center text-center">
-                    <img src="assets/skill1.png" alt="" class="w-20 h-20 mt-4">
-                    <h1 class="text-xl font-bold mt-2">HTML</h1>
+                <div class="group bg-white rounded-xl flex flex-col items-center text-center shadow-sm shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" alt="" class="w-12 h-12 mt-3 text-blue-600 fill-current">
+                    <p class="text-xl font-semibold my-2 group-hover:text-green-700 ">CSS</p>
                 </div>
-                <div class="w-36 h-36 bg-neutral-300 box-sizing rounded-md flex flex-col items-center text-center">
-                    <img src="assets/skill1.png" alt="" class="w-20 h-20 mt-4">
-                    <h1 class="text-xl font-bold mt-2">HTML</h1>
+                <div class="group bg-white rounded-xl flex flex-col items-center text-center shadow-sm shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="" class="w-12 h-12 mt-3">
+                    <p class="text-xl font-semibold my-2 group-hover:text-green-700">Javascript</p>
                 </div>
-                <div class="w-36 h-36 bg-neutral-300 box-sizing rounded-md flex flex-col items-center text-center">
-                    <img src="assets/skill1.png" alt="" class="w-20 h-20 mt-4">
-                    <h1 class="text-xl font-bold mt-2">HTML</h1>
+                <div class="group bg-white rounded-xl flex flex-col items-center text-center shadow-sm shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <img src="https://cdn.simpleicons.org/php/777BB4" alt="" class="w-12 h-12 mt-3">
+                    <p class="text-xl font-semibold my-2 group-hover:text-green-700">PHP</p>
                 </div>
-                <div class="w-36 h-36 bg-neutral-300 box-sizing rounded-md flex flex-col items-center text-center">
-                    <img src="assets/skill1.png" alt="" class="w-20 h-20 mt-4">
-                    <h1 class="text-xl font-bold mt-2">HTML</h1>
+                <div class="group bg-white rounded-xl flex flex-col items-center text-center shadow-sm shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="" class="w-12 h-12 mt-3">
+                    <p class="text-xl font-semibold my-2 group-hover:text-green-700">SQL</p>
                 </div>
-                <div class="w-36 h-36 bg-neutral-300 box-sizing rounded-md flex flex-col items-center text-center">
-                    <img src="assets/skill1.png" alt="" class="w-20 h-20 mt-4">
-                    <h1 class="text-xl font-bold mt-2">HTML</h1>
+                <div class="group bg-white rounded-xl flex flex-col items-center text-center shadow-sm shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <img src="https://cdn.simpleicons.org/git/F05032" alt="" class="w-12 h-12 mt-3">
+                    <p class="text-xl font-semibold my-2 group-hover:text-green-700">Git</p>
                 </div>
-                <div class="w-36 h-36 bg-neutral-300 box-sizing rounded-md flex flex-col items-center text-center">
-                    <img src="assets/skill1.png" alt="" class="w-20 h-20 mt-4">
-                    <h1 class="text-xl font-bold mt-2">HTML</h1>
+                <div class="group bg-white rounded-xl flex flex-col items-center text-center shadow-sm shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="" class="w-12 h-12 mt-3">
+                    <p class="text-xl font-semibold my-2 group-hover:text-green-700">Bootstrap</p>
                 </div>
-                <div class="w-36 h-36 bg-neutral-300 box-sizing rounded-md flex flex-col items-center text-center">
-                    <img src="assets/skill1.png" alt="" class="w-20 h-20 mt-4">
-                    <h1 class="text-xl font-bold mt-2">HTML</h1>
+                <div class="group bg-white rounded-xl flex flex-col items-center text-center shadow-sm shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="" class="w-12 h-12 mt-3">
+                    <p class="text-xl font-semibold my-2 group-hover:text-green-700">Tailwind</p>
+                </div>
+                <div class="group bg-white rounded-xl flex flex-col items-center text-center shadow-sm shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <img src="https://cdn.simpleicons.org/figma/F24E1E" alt="" class="w-12 h-12 mt-3">
+                    <p class="text-xl font-semibold my-2 group-hover:text-green-700">Figma</p>
+                </div>
+                <div class="group bg-white rounded-xl flex flex-col items-center text-center shadow-sm shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-300">
+                    <img src="https://cdn.simpleicons.org/notion/000000" alt="" class="w-12 h-12 mt-3">
+                    <p class="text-xl font-semibold my-2 group-hover:text-green-700">Notion</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="project" class="scroll-mt-24" >
+    <section id="project" class="reveal scroll-mt-24" >
         <div class="max-w-6xl mx-auto mt-24 px-6 text-gray-800">
-            <h1 class="text-4xl font-semibold mb-4 flex justify-center">Portfolio</h1>
-            <h1 class="text-lg font-regular mb-4 flex justify-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quidem quia nam vitae sequi, dicta dolorum optio eum ullam expedita porro sint minus eligendi autem architecto repudiandae delectus, deleniti dolores?</h1>
+            <h1 class="text-4xl tracking-widest font-semibold mb-4 flex justify-center">Portfolio</h1>
+            <h1 class="text-lg font-regular mb-4 md:px-24 flex text-center">Beberapa proyek yang saya kerjakan sebagai bagian dari tugas perkuliahan dan eksplorasi mandiri di bidang web development dan UI/UX design.</h1>
 
-            <div class="grid grid-cols-2 gap-8 mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
 
-                <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="assets/portfolio1.png" 
+                <div class="bg-white rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition duration-300 overflow-hidden">
+                    <img src="assets/portfolio-bayuwangy.png" 
                     alt="Project Thumbnail"
                     class="w-full h-44 object-cover">
 
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800">Website Portfolio Pribadi</h3>
-                        <p class="text-gray-600 text-sm mt-2"> Website portofolio responsif menggunakan HTML, Tailwind CSS, dan JavaScript untuk menampilkan profil dan project.</p>
+                        <h3 class="text-xl font-semibold text-gray-800">Website - Toko Parfum Bayu Wangy (E-Commerce)</h3>
+                        <p class="text-gray-600 text-sm text-justify mt-2"> Proyek pengembangan website yang dibuat untuk memenuhi penilaian mata kuliah Pemrograman Web Semester 1. Website ini menerapkan HTML, CSS, JavaScript, PHP, serta Database.</p>
                     
                         <div class="flex flex-wrap gap-2 mt-4">
-                            <span class="px-3 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">HTML</span>
-                            <span class="px-3 py-1 text-xs bg-teal-100 text-teal-600 rounded-full">Tailwind</span>
+                            <span class="px-3 py-1 text-xs bg-amber-100 text-amber-600 rounded-full">HTML</span>
+                            <span class="px-3 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">CSS</span>
                             <span class="px-3 py-1 text-xs bg-yellow-100 text-yellow-600 rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 text-xs bg-violet-100 text-violet-600 rounded-full">PHP</span>
+                            <span class="px-3 py-1 text-xs bg-cyan-100 text-cyan-600 rounded-full">SQL</span>
                         </div>
 
                         <div class="flex gap-4 mt-6">
-                            <a href="#" class="text-blue-600 font-medium hover:underline">Demo</a>
-                            <a href="#" class="text-gray-600 font-medium hover:underline">Source Code</a>
+                            <a href="#" target="_blank" class="text-green-700 font-medium hover:underline">Demo</a>
+                            <a href="https://github.com/vimo-ae/bayu_wangy" target="_blank" class="text-gray-600 font-medium hover:underline">Source</a>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="assets/portfolio1.png" 
+                <div class="bg-white rounded-xl shadow hover:shadow-xl hover:-translate-y-1  transition duration-300 overflow-hidden">
+                    <img src="assets/portfolio-recehku.png" 
                     alt="Project Thumbnail"
                     class="w-full h-44 object-cover">
 
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800">Website Portfolio Pribadi</h3>
-                        <p class="text-gray-600 text-sm mt-2"> Website portofolio responsif menggunakan HTML, Tailwind CSS, dan JavaScript untuk menampilkan profil dan project.</p>
+                        <h3 class="text-xl font-semibold text-gray-800">UI/UX - Design Aplikasi Recehku</h3>
+                        <p class="text-gray-600 text-sm text-justify mt-2"> Tugas proyek pada UI/UX Pathway GDGoC USU 2025 yang berfokus pada perancangan antarmuka dan pengalaman pengguna aplikasi digital. Desain dibuat menggunakan Figma.</p>
                     
                         <div class="flex flex-wrap gap-2 mt-4">
-                            <span class="px-3 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">HTML</span>
-                            <span class="px-3 py-1 text-xs bg-teal-100 text-teal-600 rounded-full">Tailwind</span>
-                            <span class="px-3 py-1 text-xs bg-yellow-100 text-yellow-600 rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">Figma</span>
                         </div>
 
                         <div class="flex gap-4 mt-6">
-                            <a href="#" class="text-blue-600 font-medium hover:underline">Demo</a>
-                            <a href="#" class="text-gray-600 font-medium hover:underline">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="assets/portfolio1.png" 
-                    alt="Project Thumbnail"
-                    class="w-full h-44 object-cover">
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800">Website Portfolio Pribadi</h3>
-                        <p class="text-gray-600 text-sm mt-2"> Website portofolio responsif menggunakan HTML, Tailwind CSS, dan JavaScript untuk menampilkan profil dan project.</p>
-                    
-                        <div class="flex flex-wrap gap-2 mt-4">
-                            <span class="px-3 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">HTML</span>
-                            <span class="px-3 py-1 text-xs bg-teal-100 text-teal-600 rounded-full">Tailwind</span>
-                            <span class="px-3 py-1 text-xs bg-yellow-100 text-yellow-600 rounded-full">JavaScript</span>
-                        </div>
-
-                        <div class="flex gap-4 mt-6">
-                            <a href="#" class="text-blue-600 font-medium hover:underline">Demo</a>
-                            <a href="#" class="text-gray-600 font-medium hover:underline">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
-                    <img src="assets/portfolio1.png" 
-                    alt="Project Thumbnail"
-                    class="w-full h-44 object-cover">
-
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800">Website Portfolio Pribadi</h3>
-                        <p class="text-gray-600 text-sm mt-2"> Website portofolio responsif menggunakan HTML, Tailwind CSS, dan JavaScript untuk menampilkan profil dan project.</p>
-                    
-                        <div class="flex flex-wrap gap-2 mt-4">
-                            <span class="px-3 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">HTML</span>
-                            <span class="px-3 py-1 text-xs bg-teal-100 text-teal-600 rounded-full">Tailwind</span>
-                            <span class="px-3 py-1 text-xs bg-yellow-100 text-yellow-600 rounded-full">JavaScript</span>
-                        </div>
-
-                        <div class="flex gap-4 mt-6">
-                            <a href="#" class="text-blue-600 font-medium hover:underline">Demo</a>
-                            <a href="#" class="text-gray-600 font-medium hover:underline">Source Code</a>
+                            <a href="https://www.figma.com/proto/T7HDbBY1G0tYD5fawgjEuZ/Mini-Project-UI-UX-GDGoC-2025?node-id=9-3&starting-point-node-id=24%3A406" target="_blank" class="text-green-700 font-medium hover:underline">Demo</a>
+                            <a href="https://www.figma.com/design/T7HDbBY1G0tYD5fawgjEuZ/Mini-Project-UI-UX-GDGoC-2025?node-id=0-1&t=87mYhv9tXpaFfo8b-1" target="_blank" class="text-gray-600 font-medium hover:underline">Source</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- <div class=" bg-neutral-300 box-sizing rounded-md"></div>
-                <div class=" bg-neutral-300 box-sizing rounded-md"></div> -->
             </div>
         </div>
     </section>
 
-    <section id="contact" class="scroll-mt-24">
-        <div class="max-w-6xl mx-auto mt-24 mb-32 px-6 text-gray-800">
-            <h1 class="text-4xl font-semibold mb-4 flex justify-center">Contact</h1>
-            <h1 class="text-lg font-regular mb-4 flex justify-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-            <div class="flex justify-between gap-5 mt-10">
-                    <div class="w-100 h-32 bg-neutral-300 box-sizing rounded-md"></div>
-                    <div class="w-100 h-32 bg-neutral-300 box-sizing rounded-md"></div>
-                    <div class="w-100 h-32 bg-neutral-300 box-sizing rounded-md"></div>
+    <section id="contact" class="reveal scroll-mt-24">
+        <div class="max-w-6xl mx-auto mt-24 mb-84 px-6 text-gray-800">
+            <h1 class="text-4xl tracking-widest font-semibold mb-4 flex justify-center">Contact</h1>
+            <h1 class="text-lg text-center font-regular mb-4">Silakan hubungi saya melalui platform berikut untuk diskusi, kolaborasi, atau keperluan profesional lainnya.</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+
+                <a href="https://mail.google.com/mail/?view=cm&to=veddertimothy@students.usu.ac.id" target="_blank" class="h-30 bg-green-700 rounded-xl flex items-center p-5 shadow-md hover:bg-green-800 hover:-translate-y-1 hover:shadow-xl transition duration-300">       
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" 
+                        alt="Email" 
+                        class="mx-2 text-white w-10 h-10 bg-white p-2 rounded-lg">
+                    <div class="ml-3">
+                        <h3 class="text-xl tracking-widest font-semibold text-white">E-Mail</h3>
+                        <p class="text-white text-sm">veddertimothy@students.usu.ac.id</p>
+                    </div>
+                </a>
+                <a href="https://github.com/vimo-ae" target="_blank" class="h-30 bg-green-700 rounded-xl flex items-center p-5 shadow-md hover:bg-green-800 hover:-translate-y-1 hover:shadow-xl transition duration-300">
+                    <img src="https://cdn.simpleicons.org/github/181717" 
+                        alt="Github" 
+                        class="mx-2 text-white w-10 h-10 bg-white p-2 rounded-lg">
+                    <div class="ml-3">
+                        <h3 class="text-xl tracking-widest font-semibold text-white">Github</h3>
+                        <p class="text-white text-md">vimo-ae</p>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/vedder-timothy-simbolon" target="_blank" class="h-30 bg-green-700 rounded-xl flex items-center p-5 shadow-md hover:bg-green-800 hover:-translate-y-1 hover:shadow-xl transition duration-300">      
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
+                        alt="LinkedIn" 
+                        class="mx-2 text-white w-10 h-10 bg-white p-2 rounded-lg">
+                    <div class="ml-3">
+                        <h3 class="text-xl tracking-widest font-semibold text-white">LinkedIn</h3>
+                        <p class="text-white text-md">Vedder Timothy Simbolon</p>
+                    </div>
+                </a>
+
             </div>
         </div>
     <section>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
