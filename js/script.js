@@ -63,3 +63,13 @@ window.addEventListener("scroll", revealOnScroll);
 
 
 
+document.querySelectorAll(".demoLink").forEach(link => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+
+    if (!href || href === "#" || href.trim() === "") {
+      e.preventDefault();
+      alert("Maaf, project ini belum tersedia secara online..");
+    }
+  });
+});
